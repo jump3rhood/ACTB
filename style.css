@@ -1,0 +1,66 @@
+html {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+body {
+  background-color: #ffd24c;
+}
+
+h1 {
+  text-align: center;
+}
+
+#form {
+  table-layout: fixed;
+  width: 70%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 3px solid black;
+}
+#form tr {
+  padding: 20px;
+}
+#form td {
+  padding: 15px;
+}
+td > input[type="text"],
+td > input[type="email"],
+td > input[type="number"],
+td > select {
+  padding: 2px 8px;
+  height: 25px;
+  border-radius: 5px;
+  border: 2px solid black;
+  outline: none;
+}
+
+button {
+  font-size: large;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+}
+#submit {
+  background-color: #36ae7c;
+  border: 2px solid black;
+  opacity: 0.6s;
+}
+#clear {
+  background-color: #eb5353;
+}
+h2 {
+  text-align: center;
+}
+#rentalcost {
+  table-layout: fixed;
+  width: 70%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 2px solid black;
+  text-align: left;
+}
+#rentalcost th,
+#rentalcost td {
+  padding: 15px;
+  border: 1px solid black;
+}

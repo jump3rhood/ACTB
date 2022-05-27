@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rock+Salt"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>ACTB Connection Portal</title>
+  </head>
+  <body>
+    <h1>ACTB Connection Portal</h1>
+    <table id="form">
+      <tr>
+        <td>
+          <label for="custname">Customer Name</label>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="custname"
+            name="custname"
+            placeholder="Enter the customer name"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="email">Customer Email</label>
+        </td>
+        <td>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="abc@gmail.com"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="mobile">Mobile Number</label>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="mobile"
+            name="mobile"
+            placeholder="Enter the Mobile Number"
+            maxlength="10"
+            max="9999999999"
+            min="7000000000"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="conntype">Type of Broadband</label>
+        </td>
+        <td>
+          <select name="conntype" id="connectionType" required>
+            <option id="Pre" value="Pre">Pre</option>
+            <option id="Post" value="Post">Post</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="scheme">Scheme Name</label>
+        </td>
+        <td>
+          <input
+            type="radio"
+            name="scheme"
+            id="scheme1"
+            value="Local"
+            required
+          />
+          <label for="scheme1">Local</label>
+          <input type="radio" name="scheme" id="scheme2" value="STD" required />
+          <label for="scheme2">STD</label>
+          <input
+            type="radio"
+            name="scheme"
+            id="scheme3"
+            value="FullTalkTime"
+            required
+          />
+          <label for="scheme3">FullTalkTime</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="duration">Connection Duration</label>
+        </td>
+        <td>
+          <input
+            type="number"
+            id="duration"
+            name="duration"
+            min="1"
+            max="12"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="submit" onclick="calculateRent()">
+            Connection Bill Amount
+          </button>
+        </td>
+        <td>
+          <button id="clear" name="clear" onclick="clearForm()">Reset</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="result" name="result"></div>
+        </td>
+      </tr>
+    </table>
+    <div class="table-div">
+      <table id="rentalcost">
+        <h2>Rental Cost Table</h2>
+        <thead>
+          <tr>
+            <th>Connection Type</th>
+            <th>Call Limit</th>
+            <th>Monthly Rental</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pre</td>
+            <td>500</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <td>Post</td>
+            <td>Unlimited</td>
+            <td>150</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
